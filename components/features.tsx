@@ -5,8 +5,8 @@ export function Features() {
         {
             icon: <Camera className="w-6 h-6 text-emerald-500" />,
             title: "Social Safe (Image Mode)",
-            description: "Instantly removes GPS, faces, and device data. Injects invisible \"visual noise\" to AI-proof your photos against tracking, facial recognition, and scraper bots.",
-            risks: ["GPS Location", "Face Data", "AI Scrapers"]
+            description: "Instantly removes GPS, Exif, faces, and device data. Injects invisible \"visual noise\" to AI-proof your photos against tracking, facial recognition, and scraper bots.",
+            risks: ["GPS Location", "Exif Data", "Face Data"]
         },
         {
             icon: <FileText className="w-6 h-6 text-blue-500" />,

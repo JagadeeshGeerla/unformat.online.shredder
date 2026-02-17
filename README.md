@@ -15,10 +15,10 @@
 ### 📸 Image Mode (Social Safe)
 Protect your privacy before posting on social media.
 - **Supported Formats**: `.jpg`, `.png`, `.heic`, `.webp`
-- **Action**: Removes Exif, IPTC, and XMP metadata (GPS coordinates, camera model, software version).
+- **Action**: Removes Exif, IPTC, and XMP metadata (GPS coordinates, camera model, software version, shutter speed, etc.).
 - **Risk Analysis**: 
   - 🔴 **High**: GPS Location, Facial Recognition Data.
-  - 🟠 **Medium**: Device Serial Number, Lens Info.
+  - 🟠 **Medium**: Exif Data (Device Serial, Lens Info).
   - ⚪ **Low**: Timestamps, Editing Software.
 
 ### 🛡️ AI-Proof My Photos (Visual Noise Injection)
