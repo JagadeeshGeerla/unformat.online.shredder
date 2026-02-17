@@ -50,7 +50,7 @@ async function inspectImage(file: File, logFn: (msg: string) => void): Promise<M
     // @ts-ignore
     const heic2any = (await import('heic2any')).default;
     // @ts-ignore
-    const exifr = (await import('exifr/dist/lite.esm.mjs')).default;
+    const exifr = (await import('exifr/dist/full.esm.mjs')).default;
 
     // Handle HEIC
     let blobToParse = file;
