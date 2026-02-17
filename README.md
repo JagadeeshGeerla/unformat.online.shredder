@@ -4,7 +4,7 @@
 > Securely strip hidden data from your files before sharing them. No server uploads, zero data leakage.
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
-![Deployment](https://img.shields.io/badge/deployment-vercel-black.svg)
+[![Deployment](https://img.shields.io/badge/deployment-vercel-black.svg)](https://unformat-online-shredder.vercel.app)
 
 ## 🚀 Overview
 

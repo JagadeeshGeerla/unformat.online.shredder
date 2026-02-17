@@ -1,8 +1,4 @@
 import { PDFDocument } from 'pdf-lib';
-// @ts-ignore
-import exifr from 'exifr/dist/lite.esm.mjs';
-// @ts-ignore
-import heic2any from 'heic2any';
 
 export type FileType = 'image' | 'pdf' | 'text' | 'unknown';
 export type RiskLevel = 'high' | 'medium' | 'low' | 'none';
@@ -50,6 +46,12 @@ export async function inspectFile(file: File, type: FileType, logFn: (msg: strin
 }
 
 async function inspectImage(file: File, logFn: (msg: string) => void): Promise<MetadataItem[]> {
+    // Dynamic import for SSR compatibility
+    // @ts-ignore
+    const heic2any = (await import('heic2any')).default;
+    // @ts-ignore
+    const exifr = (await import('exifr/dist/lite.esm.mjs')).default;
+
     // Handle HEIC
     let blobToParse = file;
     if (file.name.toLowerCase().endsWith('.heic')) {
@@ -193,6 +195,10 @@ export async function shredFile(file: File, type: FileType, logFn: (msg: string)
 }
 
 async function shredImage(file: File, logFn: (msg: string) => void): Promise<Blob> {
+    // Dynamic import
+    // @ts-ignore
+    const heic2any = (await import('heic2any')).default;
+
     // Check if HEIC
     let blobToProcess = file;
     let mimeType = file.type;
