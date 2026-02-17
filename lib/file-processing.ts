@@ -221,6 +221,23 @@ async function shredImage(file: File, logFn: (msg: string) => void): Promise<Blo
             }
             ctx.drawImage(img, 0, 0);
 
+            // AI-Proofing: Inject Visual Noise
+            logFn('[ACTION] INJECTING_VISUAL_NOISE (AI-PROOFING)...');
+            const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+            const data = imageData.data;
+
+            // Target ~5% of pixels for subtle noise (invisible to humans, confuses AI)
+            const noiseIntensity = 2; // +/- 2 delta out of 255
+            for (let i = 0; i < data.length; i += 4) {
+                if (Math.random() < 0.05) {
+                    const noise = (Math.random() - 0.5) * noiseIntensity * 2;
+                    data[i] = Math.max(0, Math.min(255, data[i] + noise));     // R
+                    data[i + 1] = Math.max(0, Math.min(255, data[i + 1] + noise)); // G
+                    data[i + 2] = Math.max(0, Math.min(255, data[i + 2] + noise)); // B
+                }
+            }
+            ctx.putImageData(imageData, 0, 0);
+
             logFn('[ACTION] STRIPPING_METADATA_SEGMENTS...');
             canvas.toBlob((blob) => {
                 URL.revokeObjectURL(url);

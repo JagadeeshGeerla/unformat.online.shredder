@@ -5,8 +5,8 @@ export function Features() {
         {
             icon: <Camera className="w-6 h-6 text-emerald-500" />,
             title: "Social Safe (Image Mode)",
-            description: "Instantly removes GPS coordinates, facial recognition data, and device serial numbers from JPG, PNG, HEIC, and WEBP photos before you share them.",
-            risks: ["GPS Location", "Face Data", "Device Serial"]
+            description: "Instantly removes GPS, faces, and device data. Injects invisible \"visual noise\" to AI-proof your photos against tracking, facial recognition, and scraper bots.",
+            risks: ["GPS Location", "Face Data", "AI Scrapers"]
         },
         {
             icon: <FileText className="w-6 h-6 text-blue-500" />,

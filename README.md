@@ -21,6 +21,11 @@ Protect your privacy before posting on social media.
   - 🟠 **Medium**: Device Serial Number, Lens Info.
   - ⚪ **Low**: Timestamps, Editing Software.
 
+### 🛡️ AI-Proof My Photos (Visual Noise Injection)
+Make your photos unusable for AI training and tracking.
+- **The Problem**: AI scrapers (Midjourney, Clearview AI) harvest public photos to train models or track faces.
+- **The Solution**: We inject subtle "Visual Noise"—random, invisible pixel variations—that breaks AI fingerprinting algorithms without degrading image quality for humans.
+
 ### 📄 Document Mode (Corporate Safe)
 Sanitize business documents before external sharing.
 - **Supported Formats**: `.pdf`

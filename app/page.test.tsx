@@ -14,7 +14,10 @@ vi.mock('lucide-react', () => ({
     CheckCircle2: () => <div data-testid="icon-check" />,
     File: () => <div data-testid="icon-file-generic" />,
     X: () => <div data-testid="icon-x" />,
-    Upload: () => <div data-testid="icon-upload" />
+    Upload: () => <div data-testid="icon-upload" />,
+    Camera: () => <div data-testid="icon-camera" />,
+    Terminal: () => <div data-testid="icon-terminal" />,
+    Shield: () => <div data-testid="icon-shield-new" />
 }));
 
 // Mock Link
@@ -26,7 +29,8 @@ describe('Home Page', () => {
     it('should render the main title', () => {
         render(<Home />);
         expect(screen.getByText(/Metadata Shredder/i)).toBeInTheDocument();
-        expect(screen.getByText(/100% Client-Side/i)).toBeInTheDocument();
+        const clientSideTexts = screen.getAllByText(/100% Client-Side/i);
+        expect(clientSideTexts.length).toBeGreaterThan(0);
     });
 
     it('should show the drop zone initially', () => {
