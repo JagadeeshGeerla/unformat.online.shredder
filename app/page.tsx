@@ -123,24 +123,23 @@ export default function Home() {
             {/* Header */}
             <header className="border-b border-neutral-800 bg-neutral-950/80 backdrop-blur-md sticky top-0 z-50">
                 <div className="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
-                    <div className="flex items-center gap-2">
-                        <div className="w-8 h-8 bg-emerald-500 rounded-lg flex items-center justify-center text-neutral-950 font-bold">
-                            <ShieldCheck size={20} />
+                    <Link href="https://www.unformat.online/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
+                        <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center text-neutral-950 font-bold">
+                            <span className="font-bold text-lg">U</span>
                         </div>
-                        <span className="font-bold text-lg tracking-tight text-white">Unformat<span className="text-emerald-500">.Shredder</span></span>
-                    </div>
-                    <div className="text-xs font-mono text-neutral-500 border border-neutral-800 rounded px-2 py-1">
-                        Build v2.0.0
-                    </div>
+                        <span className="font-bold text-lg tracking-tight text-white">Unformat<span className="text-neutral-400">.online</span></span>
+                    </Link>
+
+                    <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-neutral-400">
+                        <Link href="https://www.unformat.online/" className="hover:text-white transition-colors">Clean Text</Link>
+                        <Link href="https://www.unformat.online/format-json-online" className="hover:text-white transition-colors">Format JSON</Link>
+                        <Link href="https://www.unformat.online/format-sql-online" className="hover:text-white transition-colors">Format SQL</Link>
+                        <span className="text-emerald-500">Shredder</span>
+                    </nav>
                 </div>
             </header>
 
             <main className="max-w-5xl mx-auto px-6 py-12 flex flex-col items-center">
-
-                {/* Ad Slot Top */}
-                <div className="w-[728px] h-[90px] mb-12 border border-dashed border-neutral-800 bg-neutral-900/50 flex items-center justify-center text-neutral-600 text-xs tracking-widest uppercase">
-                    Ad Slot 728x90
-                </div>
 
                 {/* Main Interface */}
                 <div className="w-full max-w-2xl">
@@ -299,11 +298,6 @@ export default function Home() {
 
                 {/* Features Section */}
                 <Features />
-
-                {/* Ad Slot Bottom */}
-                <div className="mt-16 w-[300px] h-[250px] border border-dashed border-neutral-800 bg-neutral-900/50 flex items-center justify-center text-neutral-600 text-xs tracking-widest uppercase">
-                    Ad Slot 300x250
-                </div>
 
             </main>
 
