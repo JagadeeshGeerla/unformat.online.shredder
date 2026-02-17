@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unformat Shredder | 100% Client-Side Metadata Removal</title>
+    <meta name="description" content="Securely remove metadata from images and PDFs locally in your browser.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Libraries -->
+    <!-- PDF Lib -->
+    <script src="https://unpkg.com/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">UNFORMAT_SHREDDER</div>
+        <div class="badge">SESSION_ID: <span id="session-id">LOCAL</span></div>
+    </header>
+
+    <main class="container">
+        <!-- Ad Slot Top -->
+        <div class="ad-slot ad-leaderboard" aria-label="Advertisement Space">
+            <span>AD_SLOT_728x90</span>
+        </div>
+
+        <div id="app-interface">
+            <!-- Stage 1: Drag & Drop -->
+            <section id="stage-drop" class="stage active">
+                <div class="drop-zone" id="drop-zone">
+                    <div class="pulse-ring"></div>
+                    <div class="icon">➜</div>
+                    <h2>DROP_TARGET_LOCKED</h2>
+                    <p>INITIATE_FILE_TRANSFER</p>
+                    <input type="file" id="file-input" hidden multiple>
+                    <button class="btn browse-btn" onclick="document.getElementById('file-input').click()">[
+                        BROWSE_FILES ]</button>
+                </div>
+            </section>
+
+            <!-- Stage 2: Inspect -->
+            <section id="stage-inspect" class="stage hidden">
+                <div class="panel high-risk-panel">
+                    <h3>⚠ HIGH_RISK_METADATA_DETECTED</h3>
+                    <div class="file-info">
+                        <span id="file-name">filename.jpg</span>
+                        <span id="file-size">0KB</span>
+                    </div>
+                    <ul id="metadata-list" class="metadata-list">
+                        <!-- Items injected via JS -->
+                    </ul>
+                </div>
+
+                <!-- Stage 3: Shred Action -->
+                <div class="actions">
+                    <button id="btn-cancel" class="btn btn-secondary">[ ABORT ]</button>
+                    <button id="btn-shred" class="btn btn-primary btn-glitch">
+                        <span class="text">>> EXECUTE_SHRED <<< /span>
+                                <span class="decoration"></span>
+                    </button>
+                </div>
+            </section>
+
+            <!-- Stage 4: Download -->
+            <section id="stage-download" class="stage hidden">
+                <div class="panel success-panel">
+                    <h3>✔ CLEAN_&_SAFE</h3>
+                    <p>METADATA_PURGED_SUCCESSFULLY</p>
+                    <div id="download-container">
+                        <!-- Download links injected here -->
+                    </div>
+                    <button id="btn-reset" class="btn btn-secondary">[ PROCESS_NEW_FILE ]</button>
+                </div>
+            </section>
+
+            <!-- Loading Overlay -->
+            <div id="loading-overlay" class="hidden">
+                <div class="loader">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+                <p>PROCESSING_DATA_STREAM...</p>
+            </div>
+        </div>
+
+        <!-- Live Log Terminal -->
+        <div id="live-log-container" class="live-log">
+            <div class="log-header">>> SYSTEM_LOG_STREAM</div>
+            <div id="log-content">
+                <div class="log-entry"><span class="timestamp">[INIT]</span> READY_FOR_OP</div>
+            </div>
+        </div>
+
+        <!-- Ad Slot Sidebar/Bottom -->
+        <div class="ad-slot ad-rectangle" aria-label="Advertisement Space">
+            <span>AD_SLOT_300x250</span>
+        </div>
+    </main>
+
+    <footer>
+        <div class="privacy-badge">
+            <span class="shield-icon">🛡</span>
+            <span>PRIVACY_AUDIT: 100%_CLIENT_SIDE_PROCESSING</span>
+        </div>
+        <div class="copyright">
+            &copy; 2026 UNFORMAT.ONLINE
+        </div>
+    </footer>
+
+    <script type="module" src="app.js"></script>
+</body>
+
+</html>
