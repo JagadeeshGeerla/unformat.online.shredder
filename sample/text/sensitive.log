@@ -1,0 +1,7 @@
+2026-02-18 10:00:01 [INFO] Server started at 192.168.1.55
+2026-02-18 10:00:02 [DEBUG] DB Connection established.
+2026-02-18 10:05:00 [WARN] Failed login attempt from 203.0.113.42
+2026-02-18 10:05:01 [ERROR] User admin@example.com not found.
+2026-02-18 10:06:15 [INFO] Specific request received.
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
+2026-02-18 10:10:00 [INFO] Shutting down service.

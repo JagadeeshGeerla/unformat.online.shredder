@@ -1,0 +1,14 @@
+{
+    "appName": "UnformatShredder",
+    "version": "2.0.0",
+    "api": {
+        "endpoint": "https://api.example.com",
+        "timeout": 5000,
+        "key": "sk-live-0123456789abcdef0123456789abcdef",
+        "backupKey": "sk-test-abcdef0123456789abcdef01234567"
+    },
+    "logging": {
+        "level": "debug",
+        "file": "/var/log/app.log"
+    }
+}

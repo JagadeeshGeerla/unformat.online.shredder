@@ -76,7 +76,7 @@ async function inspectImage(file: File, logFn: (msg: string) => void): Promise<M
     const enrichedTags: MetadataItem[] = [];
 
     // Risk Classification
-    const highRiskKeys = ['GPSLatitude', 'GPSLongitude', 'Face', 'RegionInfo']; // GPS, Face Data
+    const highRiskKeys = ['GPSLatitude', 'GPSLongitude', 'latitude', 'longitude', 'Face', 'RegionInfo']; // GPS, Face Data
     const mediumRiskKeys = ['Make', 'Model', 'SerialNumber', 'LensModel', 'LensSerialNumber']; // Device Info
     const lowRiskKeys = ['Software', 'DateTimeOriginal', 'CreateDate', 'ModifyDate']; // Time/Software
 
