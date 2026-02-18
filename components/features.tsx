@@ -52,17 +52,39 @@ export function Features() {
                 ))}
             </div>
 
-            <div className="mt-8 p-6 bg-emerald-950/20 border border-emerald-900/50 rounded-xl flex items-start gap-4">
-                <div className="bg-emerald-500/10 p-2 rounded-lg">
-                    <Shield className="w-6 h-6 text-emerald-500" />
+            <div className="mt-8 grid md:grid-cols-2 gap-6">
+                <div className="p-6 bg-emerald-950/20 border border-emerald-900/50 rounded-xl flex items-start gap-4">
+                    <div className="bg-emerald-500/10 p-2 rounded-lg">
+                        <Shield className="w-6 h-6 text-emerald-500" />
+                    </div>
+                    <div>
+                        <h3 className="text-lg font-bold text-emerald-400 mb-1">100% Client-Side Privacy</h3>
+                        <p className="text-sm text-emerald-200/70">
+                            All processing happens directly in your browser's memory. Your files are never uploaded to any server,
+                            guaranteeing zero data leakage. You can even use this tool offline.
+                        </p>
+                    </div>
                 </div>
-                <div>
-                    <h3 className="text-lg font-bold text-emerald-400 mb-1">100% Client-Side Privacy</h3>
-                    <p className="text-sm text-emerald-200/70">
-                        All processing happens directly in your browser's memory. Your files are never uploaded to any server,
-                        guaranteeing zero data leakage. You can even use this tool offline.
-                    </p>
-                </div>
+
+                <details className="group p-6 bg-neutral-900/30 border border-neutral-800 rounded-xl cursor-pointer hover:bg-neutral-900/50 transition-colors">
+                    <summary className="flex items-center justify-between font-bold text-neutral-300 list-none">
+                        <span>How We Strip Metadata</span>
+                        <span className="bg-neutral-800 text-xs px-2 py-1 rounded text-neutral-500 group-open:bg-emerald-500/20 group-open:text-emerald-400 transition-colors">
+                            DEEP DIVE
+                        </span>
+                    </summary>
+                    <div className="mt-4 text-sm text-neutral-400 space-y-3">
+                        <p>We use a <strong>"Scorched Earth"</strong> protocol. Instead of deleting tags, we regenerate the file:</p>
+                        <ol className="list-decimal list-inside space-y-1 ml-1 text-neutral-500">
+                            <li><strong>Decode:</strong> We extract raw pixel data (RGBA) from your image.</li>
+                            <li><strong>Reconstruct:</strong> We paint these pixels onto a blank HTML5 Canvas.</li>
+                            <li><strong>Export:</strong> A brand new file is created from the canvas.</li>
+                        </ol>
+                        <p className="text-xs border-t border-neutral-800 pt-3 mt-3">
+                            Result: A 100% new container with zero legacy data (Exif, IPTC, XMP, ICC Profiles, Thumbnails).
+                        </p>
+                    </div>
+                </details>
             </div>
         </div>
     );
