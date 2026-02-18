@@ -328,8 +328,8 @@ export default function Home() {
                         &copy; 2026 Unformat.online. All logs cleared on refresh.
                     </div>
                     <div className="flex gap-6 text-sm text-neutral-500">
-                        <Link href="#" className="hover:text-emerald-500 transition-colors">Privacy</Link>
-                        <Link href="#" className="hover:text-emerald-500 transition-colors">Terms</Link>
+                        <Link href="https://www.unformat.online/privacy" className="hover:text-emerald-500 transition-colors">Privacy</Link>
+                        <Link href="https://www.unformat.online/about" className="hover:text-emerald-500 transition-colors">About</Link>
                         <Link href="https://github.com/JagadeeshGeerla/unformat.online" className="hover:text-emerald-500 transition-colors">GitHub</Link>
                     </div>
                 </div>

@@ -9,13 +9,19 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
+    metadataBase: new URL("https://www.unformat.online"),
     title: "Unformat Shredder | Remove Metadata & Exif Online (Client-Side)",
     description: "Securely clean hidden metadata, GPS, and Exif from images, PDFs, and text files. Zero server uploads - 100% browser-based privacy tool.",
     keywords: ["remove metadata", "exif remover", "clean pdf", "scrub photos", "privacy tool", "client-side", "offline functionality"],
     authors: [{ name: "Unformat.online" }],
+    alternates: {
+        canonical: "https://www.unformat.online/shredder",
+    },
     openGraph: {
         title: "Unformat Shredder | Client-Side Metadata Remover",
         description: "Securely remove metadata from images, PDFs, and text files entirely in your browser.",
+        url: "https://www.unformat.online/shredder",
+        siteName: "Unformat.online",
         type: "website",
     }
 };
