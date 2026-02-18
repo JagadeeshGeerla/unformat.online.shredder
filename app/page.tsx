@@ -154,12 +154,28 @@ export default function Home() {
                                 exit={{ opacity: 0, y: -20 }}
                                 className="w-full"
                             >
-                                <div className="text-center mb-8">
-                                    <h1 className="text-4xl font-bold text-white mb-4 tracking-tight">Metadata Shredder</h1>
-                                    <p className="text-neutral-400 text-lg">
-                                        Remove hidden data from your files. <br />
-                                        <span className="text-emerald-500">100% Client-Side. No uploads.</span>
+                                <div className="text-center mb-10">
+                                    <h1 className="text-5xl font-bold text-white mb-6 tracking-tight">
+                                        Unformat <span className="text-emerald-500">Shredder</span>
+                                    </h1>
+                                    <p className="text-neutral-400 text-xl max-w-lg mx-auto leading-relaxed mb-8">
+                                        The only <span className="text-white font-medium">100% Client-Side</span> tool to strip hidden metadata, GPS locations, and author info from your files.
                                     </p>
+
+                                    <div className="flex flex-wrap justify-center gap-4 text-sm font-medium text-neutral-500 mb-8">
+                                        <span className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-neutral-900 border border-neutral-800">
+                                            <ShieldCheck size={14} className="text-emerald-500" />
+                                            Zero Uploads
+                                        </span>
+                                        <span className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-neutral-900 border border-neutral-800">
+                                            <RefreshCw size={14} className="text-blue-500" />
+                                            Deep Scrubbing
+                                        </span>
+                                        <span className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-neutral-900 border border-neutral-800">
+                                            <Download size={14} className="text-amber-500" />
+                                            Works Offline
+                                        </span>
+                                    </div>
                                 </div>
                                 <DropZone onFileSelect={handleFileSelect} />
                             </motion.div>
